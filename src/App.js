@@ -399,6 +399,7 @@ export default class App extends React.Component {
         collectData.push(product)
         this.setState({ allProducts: [...collectData] })
       }
+      return 0;
     })
     if (collectData.length === 0) {
       this.setState({ allProducts: [] })
