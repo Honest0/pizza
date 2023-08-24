@@ -1,0 +1,10 @@
+namespace: pizzatime
+pizzatime:
+  defines: runnable
+  metadata:
+    name: pizzatime
+    description: A pizza ordering web application.
+    icon: https://emojiapi.dev/api/v1/pizza.svg
+  containers:
+    pizzatime:
+      build: .
