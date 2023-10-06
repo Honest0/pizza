@@ -1,0 +1,17 @@
+namespace: pizzatime
+pizzatime:
+  defines: runnable
+  metadata:
+    name: pizzatime
+    description: A pizza ordering application, with categories and cart features
+    icon: https://emojiapi.dev/api/v1/pizza.svg
+  containers:
+    pizzatime:
+      build: .
+  services:
+    pizzatime-5000-tcp:
+      container: pizzatime
+      port: 5000
+      host-port: 5000
+      publish: false
+      protocol: TCP
