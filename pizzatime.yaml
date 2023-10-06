@@ -1,0 +1,19 @@
+namespace: pizzatime
+pizzatime:
+  defines: runnable
+  metadata:
+    name: pizzatime
+    description: >-
+      A pizza restaurant app that provides interactive menus, cart management,
+      and user registration features.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    pizzatime:
+      build: .
+  services:
+    pizzatime-3000:
+      container: pizzatime
+      port: 3000
+      host-port: 3000
+      publish: false
+      protocol: TCP
