@@ -1,0 +1,5 @@
+namespace: pizza
+
+stack:
+  defines: group
+  members: []
