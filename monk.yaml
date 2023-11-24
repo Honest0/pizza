@@ -1,0 +1,28 @@
+namespace: pizza
+
+pizza-time-frontend:
+  defines: runnable
+  metadata:
+    name: pizza-time-frontend
+    description: Frontend service for the Pizza Time e-commerce platform, built with React.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    pizza-time-frontend:
+      image: env-1997.registry.local/pizza-time-frontend:main-4fd69e3
+      build: .
+      dockerfile: Dockerfile.pizza-time-frontend
+  services:
+    react-development-server:
+      description: Port for the React development server
+      container: pizza-time-frontend
+      port: 3000
+      host-port: 3000
+      publish: true
+      protocol: tcp
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - pizza/pizza-time-frontend
